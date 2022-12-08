@@ -33,7 +33,6 @@ textarea {
 }
 
 /* typography */
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -95,6 +94,23 @@ footer {
     li {
       float: left;
       margin-left: 15px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -168,4 +184,9 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menu */
+.dropdown-menu.active {
+  display: block;
 }
