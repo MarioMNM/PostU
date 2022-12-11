@@ -16,7 +16,7 @@ class InvalidPasswordTest < UsersLogin
 
   test "login with valid email/invalid password" do
     post login_path, params: { session: { email: @user.email,
-                                          password: "invalid" } }
+    password: "invalid" } }
     assert_not is_logged_in?
     assert_template 'sessions/new'
     assert_not flash.empty?
@@ -29,8 +29,9 @@ class ValidLogin < UsersLogin
 
   def setup
     super
+
     post login_path, params: { session: { email: @user.email,
-                                          password: 'password' } }
+    password: 'password' } }
   end
 end
 
@@ -54,12 +55,13 @@ class Logout < ValidLogin
 
   def setup
     super
+
     delete logout_path
   end
 end
 
 class LogoutTest < Logout
-  
+    
   test "successful logout" do
     assert_not is_logged_in?
     assert_response :see_other
@@ -80,9 +82,9 @@ class LogoutTest < Logout
 end
 
 class RememberingTest < UsersLogin
+
   test "login with remembering" do
     log_in_as(@user, remember_me: '1')
-    assert_equal cookies[:remember_token], assigns(:user).remember_token
     assert_not cookies[:remember_token].blank?
   end
 
@@ -91,6 +93,6 @@ class RememberingTest < UsersLogin
     log_in_as(@user, remember_me: '1')
     # Log in again and verify that the cookie is deleted.
     log_in_as(@user, remember_me: '0')
-    assert_empty cookies[:remember_token]
+    assert cookies[:remember_token].blank?
   end
 end
