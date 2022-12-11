@@ -35,7 +35,7 @@ class User < ApplicationRecord
     remember_digest || remember
   end
 
-# Returns true if the given token matches the digest.
+  # Returns true if the given token matches the digest.
   def authenticated?(attribute, token)
     digest = send("#{attribute}_digest")
     return false if digest.nil?
@@ -47,6 +47,16 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end  
 
+  # Activates an account.
+  def activate
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+
+  # Sends activation email.
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+  
   private
   
     # Converts email to all lowercase.
