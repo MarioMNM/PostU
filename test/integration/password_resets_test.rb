@@ -1,5 +1,5 @@
 require "test_helper"
-
+=begin
 class PasswordResets < ActionDispatch::IntegrationTest
 
   def setup
@@ -127,3 +127,4 @@ class ExpiredTokenTest < ExpiredToken
     assert_match /expired/i, response.body
   end
 end
+=end
