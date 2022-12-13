@@ -44,11 +44,9 @@ class AccountActivationTest < UsersSignup
     @user = assigns(:user)
   end
 
-=begin Not commenting any of these test raises an error
   test "should not be activated" do
     assert_not @user.activated?
   end
-=end
 
   test "should not be able to log in before account activation" do
     log_in_as(@user)
