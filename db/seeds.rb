@@ -1,6 +1,6 @@
 # Create a main sample user.
 User.create!(name: "Mario Novella",
-             email: "mario.novella@gmail",
+             email: "mario.novella@gmail.com",
              password: "foobaradmin",
              password_confirmation: "foobaradmin",
              admin: true,
