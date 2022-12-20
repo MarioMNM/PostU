@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
       redirect_to request.referrer, status: :see_other
     end
   end
-
+  
   private
 
     def micropost_params
