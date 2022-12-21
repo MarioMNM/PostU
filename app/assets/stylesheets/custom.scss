@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #ABB2B9;
 $light-grey: #D3D3D3;
 
 @mixin box_sizing {
@@ -296,5 +296,13 @@ span.image {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+/* Search bar */
+.search-bar {
+  padding-top: 14px;
+  input {
+    background-color: $gray-medium-light;
   }
 }

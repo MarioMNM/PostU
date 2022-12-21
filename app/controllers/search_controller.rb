@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
+  
   def index
     @query = Micropost.ransack(params[:q])
-    @microposts = @query.result(distinct: true)
+    @microposts = @query.result.includes(:user)
   end
 end
