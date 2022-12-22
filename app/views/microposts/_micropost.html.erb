@@ -18,5 +18,5 @@
   <span class="like">
     <%= button_to 'Like', micropost_likes_path(micropost), method: :post %>
   </span>
-  <span class="likes-count"><%= pluralize(micropost.likes.count, "like") %></span>
+  <span class="likes-count"><%= pluralize(micropost.likes.count, "Like") %></span>
 </li>
