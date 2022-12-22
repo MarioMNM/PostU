@@ -2,8 +2,13 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-$gray-medium-light: #ABB2B9;
+$main-background-color: #566573;
+$second-background-color: #808B96;
 $light-grey: #D3D3D3;
+$second-font-color: #A7ADB2;
+$button-color: #34495E;
+$button-hover-color: #2E4053;
+$delete-color: #212F3D;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -15,6 +20,8 @@ $light-grey: #D3D3D3;
 /* universal */
 body {
   padding-top: 60px;
+  background-color: $main-background-color;
+  color: white;
 }
 
 section {
@@ -23,6 +30,7 @@ section {
 
 textarea {
   resize: vertical;
+  background-color: $second-background-color;
 }
 
 .center {
@@ -31,6 +39,13 @@ textarea {
   margin-bottom: 10px;
   }
 }
+
+a {
+  color: white;
+  &:hover {
+    color: white;
+  }
+} 
 
 /* typography */
 h1, h2, h3, h4, h5, h6 {
@@ -73,16 +88,25 @@ p {
   }
 }
 
+/* header */
+.navbar {
+  background-color: #1C2833;
+}
+
+.dropdown-menu {
+  background-color: $second-background-color;
+}
+
 /* footer */
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 1px solid $second-background-color;
+  color: #D5D8DC;
   a {
-    color: $gray;
+    color: #ABB2B9;
     &:hover {
-      color: $gray-darker;
+      color: #ABB2B9;
     }
   }
   small {
@@ -121,6 +145,15 @@ footer {
   float: left;
   width: 100%;
   margin-top: 45px;
+}
+
+/* jumbotron */
+.jumbotron {
+  background-color: $second-background-color;
+  color: white;
+  h2 {
+    color: white;
+  }
 }
 
 /* sidebar */
@@ -167,14 +200,14 @@ aside {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
+    color: white;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+      color: white;
     }
   }
   strong {
@@ -242,7 +275,7 @@ input {
   display: block;
 }
 
-/* Users index */
+/* users index */
 .users {
   list-style: none;
   margin: 0;
@@ -250,6 +283,13 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.delete-user {
+  color: $delete-color;
+  &:hover {
+    color: $delete-color;
   }
 }
 
@@ -274,7 +314,7 @@ input {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: $second-font-color;
     display: block;
     margin-left: 60px;
   }
@@ -299,10 +339,88 @@ span.image {
   }
 }
 
-/* Search bar */
+.field textarea {
+  background-color: $second-background-color;
+}
+
+.user-name {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.delete-micropost {
+  color: $delete-color;
+  &:hover {
+    color: $delete-color;
+  }
+}
+
+.link-view-profile {
+  color: $second-font-color;
+  &:hover {
+    color: $second-font-color;
+  }
+}
+
+.microposts-count {
+  color: $second-font-color;
+  &:hover {
+    color: $second-font-color;
+  }
+}
+
+/* search bar */
 .search-bar {
   padding-top: 14px;
   input {
-    background-color: $gray-medium-light;
+    background-color: $second-background-color;
   }
+}
+
+/* search table */
+table thead th { color: white; font-size:15pt; }
+
+/* buttons */
+.btn-primary {
+  background-color: $button-color;
+}
+
+.btn-primary:hover { background-color: $button-hover-color; }
+
+/* edit users image */
+.profile-link {
+  color: white;
+}
+
+
+/* pagination */
+.pagination > li > a
+{
+    background-color: $second-background-color;
+    color: $button-color;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: $button-hover-color;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: $button-color;
+    border: solid 1px $button-color;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: $button-hover-color;
+    border: solid 1px $button-hover-color;
 }
