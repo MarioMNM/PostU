@@ -15,8 +15,13 @@
                                      turbo_confirm: "Are you sure?" } %>
     <% end %>
   </span>
-  <span class="like">
-    <%= button_to 'Like', micropost_likes_path(micropost), method: :post %>
+  <span>
+    <% pre_like = micropost.likes.find { |like| like.user_id == current_user.id} %>
+    <% if pre_like %>
+      <%= button_to 'Unlike', micropost_like_path(micropost, pre_like), method: :delete, class: "buttonTo" %>
+    <% else %>
+      <%= button_to 'Like', micropost_likes_path(micropost), method: :post, class: "buttonTo" %>
+    <% end %>
   </span>
   <span class="likes-count"><%= pluralize(micropost.likes.count, "Like") %></span>
 </li>

@@ -424,3 +424,13 @@ table thead th { color: white; font-size:15pt; }
     background-color: $button-hover-color;
     border: solid 1px $button-hover-color;
 }
+
+/* like */
+.buttonTo {
+  background-color: $button-color;
+  border: none;
+}
+
+.likes-count {
+  color: $second-font-color;
+}
