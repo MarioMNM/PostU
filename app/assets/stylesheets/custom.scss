@@ -180,6 +180,14 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+    p {
+      color: white;
+      font-size: 1.1em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 5px;
+    }
   }
 }
 
@@ -346,7 +354,7 @@ span.image {
   background-color: $second-background-color;
 }
 
-.user-name {
+.name {
   color: white;
   &:hover {
     color: white;
