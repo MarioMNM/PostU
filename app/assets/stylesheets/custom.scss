@@ -147,6 +147,19 @@ footer {
   margin-top: 45px;
 }
 
+/* vertical bars */
+.feed {
+  border-left: 1px solid $second-background-color;
+  padding-left: 15px;
+  border-right: 1px solid $second-background-color;
+}
+
+.microposts-title {
+  border-left: 1px solid $second-background-color;
+  padding-left: 15px;
+  border-right: 1px solid $second-background-color;
+}
+
 /* jumbotron */
 .jumbotron {
   background-color: $second-background-color;
