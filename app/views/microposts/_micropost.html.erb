@@ -18,10 +18,15 @@
   <span>
     <% pre_like = micropost.likes.find { |like| like.user_id == current_user.id} %>
     <% if pre_like %>
-      <%= button_to 'Unlike', micropost_like_path(micropost, pre_like), method: :delete, class: "buttonTo" %>
+    <div>
+      <%= button_to 'Unlike', micropost_like_path(micropost, pre_like), method: :delete, class: "buttonToUnlike" %>
+      <span class="likes-count-unlike"><%= pluralize(micropost.likes.count, "Like") %></span>
+    </div>
     <% else %>
-      <%= button_to 'Like', micropost_likes_path(micropost), method: :post, class: "buttonTo" %>
+    <div class="buttonToLikePadding">
+      <%= button_to 'Like', micropost_likes_path(micropost), method: :post, class: "buttonToLike" %>
+      <span class="likes-count-like"><%= pluralize(micropost.likes.count, "Like") %></span>
+    </div>
     <% end %>
   </span>
-  <span class="likes-count"><%= pluralize(micropost.likes.count, "Like") %></span>
 </li>

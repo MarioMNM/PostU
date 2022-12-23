@@ -450,11 +450,29 @@ table thead th { color: white; font-size:15pt; }
 }
 
 /* like */
-.buttonTo {
+.buttonToUnlike {
   background-color: $button-color;
   border: none;
+  float: left;
 }
 
-.likes-count {
+.buttonToLike {
+  background-color: $button-color;
+  border: none;
+  float: left;
+}
+
+.buttonToLikePadding{
+  padding-left: 6px;
+}
+
+
+.likes-count-unlike {
   color: $second-font-color;
+  padding-left: 9px;
+}
+
+.likes-count-like {
+  color: $second-font-color;
+  padding-left: 16px;
 }
