@@ -409,15 +409,26 @@ table thead th { color: white; font-size:15pt; }
 /* buttons */
 .btn-primary {
   background-color: $button-color;
+  color: #737C86;
+  &:hover { 
+    background-color: $button-hover-color; 
+    color: #737C86;
+  }
 }
 
-.btn-primary:hover { background-color: $button-hover-color; }
+#btn_unfollow {
+  background-color: $second-background-color;
+  color: #4A4F54;
+  &:hover { 
+    background-color: #757F89; 
+    color: #4A4F54;
+  }
+}
 
 /* edit users image */
 .profile-link {
   color: white;
 }
-
 
 /* pagination */
 .pagination > li > a
