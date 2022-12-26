@@ -1,4 +1,5 @@
 # Create a main sample user.
+=begin
 User.create!(name: "Mario Novella",
              email: "mario.novella@gmail.com",
              password: "foobaradmin",
@@ -6,8 +7,16 @@ User.create!(name: "Mario Novella",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
+=end
+User.create!(name: "PostU News",
+             email: "postu@news.com",
+             password: "foobaradmin",
+             password_confirmation: "foobaradmin",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
-
+=begin
 # Generate a bunch of additional users.
 99.times do |n|
   name = Faker::Name.name
@@ -35,3 +44,4 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+=end

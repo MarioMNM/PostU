@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
   before_action :set_query
-  
+
   def set_query
     @query = Micropost.ransack(params[:q])
   end
-  
+
   private
 
     # Confirms a logged-in user.
