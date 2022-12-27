@@ -18,15 +18,29 @@
   <span>
     <% pre_like = micropost.likes.find { |like| like.user_id == current_user.id} %>
     <% if pre_like %>
-    <div>
-      <%= button_to 'Unlike', micropost_like_path(micropost, pre_like), method: :delete, class: "buttonToUnlike" %>
-      <span class="likes-count-unlike"><%= pluralize(micropost.likes.count, "Like") %></span>
-    </div>
+      <div>
+        <%= button_to 'Unlike', micropost_like_path(micropost, pre_like), method: :delete, class: "buttonToUnlike" %>
+        <span class="likes-count-unlike">
+          <%= pluralize(micropost.likes.count, "Like") %>
+          <% if micropost.likes.count == 1 %>
+              <%= link_to "Comment", micropost, class: "comment-link-like" %>
+          <% else %>
+            <%= link_to "Comment", micropost, class: "comment-link-likes" %>
+          <% end %>
+        </span>
+      </div>
     <% else %>
-    <div class="buttonToLikePadding">
-      <%= button_to 'Like', micropost_likes_path(micropost), method: :post, class: "buttonToLike" %>
-      <span class="likes-count-like"><%= pluralize(micropost.likes.count, "Like") %></span>
-    </div>
+      <div class="buttonToLikePadding">
+        <%= button_to 'Like', micropost_likes_path(micropost), method: :post, class: "buttonToLike" %>
+        <span class="likes-count-like">
+          <%= pluralize(micropost.likes.count, "Like") %>
+          <% if micropost.likes.count == 1 %>
+              <%= link_to "Comment", micropost, class: "comment-link-like" %>
+          <% else %>
+            <%= link_to "Comment", micropost, class: "comment-link-likes" %>
+          <% end %>
+        </span>
+      </div>
     <% end %>
   </span>
 </li>

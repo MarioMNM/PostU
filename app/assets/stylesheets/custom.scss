@@ -395,6 +395,22 @@ span.image {
   }
 }
 
+.comment-link-like {
+  padding-left: 13px;
+  color: $second-font-color;
+  &:hover {
+    color: $second-font-color;
+  }
+}
+
+.comment-link-likes {
+  padding-left: 6px;
+  color: $second-font-color;
+  &:hover {
+    color: $second-font-color;
+  }
+}
+
 /* search bar */
 .search-bar {
   padding-top: 14px;

@@ -23,11 +23,15 @@ class MicropostsController < ApplicationController
       redirect_to request.referrer, status: :see_other
     end
   end
-  
+
+  def show
+    @micropost = Micropost.find(params[:id])
+  end
+
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :image)
+      params.require(:micropost).permit(:id, :content, :image)
     end
     
     def correct_user
