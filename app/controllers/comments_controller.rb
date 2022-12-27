@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      flash[:notice] = 'Comment succesfully created'
+      flash[:success] = 'Comment succesfully created'
       redirect_to micropost_path(@micropost)
     else
       flash[:alert] = 'Comment has not been created'
