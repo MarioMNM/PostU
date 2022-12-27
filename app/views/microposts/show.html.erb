@@ -3,3 +3,11 @@
 <ol class="microposts">
   <%= render @micropost %>
 </ol>
+
+<ol class="comment-text-area">
+  <%= render 'comments/form', post: @micropost %>
+</ol>
+
+<ol class="comments">
+    <%= render @comments %>
+</ol>

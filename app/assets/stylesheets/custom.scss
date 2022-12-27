@@ -160,6 +160,24 @@ footer {
   border-right: 1px solid $second-background-color;
 }
 
+.comment-text-area {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  border-top: 1px solid $second-background-color;
+  border-left: 1px solid $second-background-color;
+  border-right: 1px solid $second-background-color;
+  border-bottom: 1px solid $second-background-color;
+}
+
+.microposts {
+  border-bottom: 1px solid $second-background-color;
+}
+
+
+
 /* jumbotron */
 .jumbotron {
   background-color: $second-background-color;
@@ -390,24 +408,65 @@ span.image {
 
 .microposts-count {
   color: $second-font-color;
-  &:hover {
-    color: $second-font-color;
-  }
 }
 
 .comment-link-like {
-  padding-left: 13px;
-  color: $second-font-color;
+  padding-left: 16px;
+  color: $button-hover-color;
   &:hover {
-    color: $second-font-color;
+    color: $button-hover-color;
   }
 }
 
-.comment-link-likes {
-  padding-left: 6px;
-  color: $second-font-color;
+.comment-link-unlike {
+  padding-left: 9px;
+  color: $button-hover-color;
   &:hover {
+    color: $button-hover-color;
+  }
+}
+
+.comments-count-like {
+  padding-left: 27px;
+}
+
+.comments-count-likes {
+  padding-left: 20px;
+}
+
+/* comments */
+.comments {
+  list-style: none;
+  padding: 35;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $second-background-color;
+    border-left: 1px solid $second-background-color;
+    padding-left: 15px;
+    border-right: 1px solid $second-background-color;
+    border-bottom: 1px solid $second-background-color;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
     color: $second-font-color;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
   }
 }
 
