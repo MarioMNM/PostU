@@ -1,11 +1,5 @@
 # Create a main sample user.
-User.create!(name: "Mario Novella",
-             email: "mario.novella@gmail.com",
-             password: "foobaradmin",
-             password_confirmation: "foobaradmin",
-             admin: true,
-             activated: true,
-             activated_at: Time.zone.now)
+
 
 # Generate a bunch of additional users.
 99.times do |n|
