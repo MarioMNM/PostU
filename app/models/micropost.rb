@@ -12,4 +12,6 @@ class Micropost < ApplicationRecord
                                       message: "must be a valid image format" },
                       size:         { less_than: 5.megabytes,
                                       message:   "should be less than 5MB" }
+  has_noticed_notifications model_name: 'Notification'
+  has_many :notifications, through: :user, dependent: :destroy
 end

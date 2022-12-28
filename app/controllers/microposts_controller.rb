@@ -27,6 +27,8 @@ class MicropostsController < ApplicationController
   def show
     @micropost = Micropost.find(params[:id])
     @comments = @micropost.comments.order(created_at: :desc)
+
+    mark_notifications_as_read
   end
 
   private
@@ -34,9 +36,16 @@ class MicropostsController < ApplicationController
     def micropost_params
       params.require(:micropost).permit(:id, :content, :image)
     end
-    
+
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url, status: :see_other if @micropost.nil?
+    end
+
+    def mark_notifications_as_read
+      if current_user && session[:user_id] == @micropost.user_id
+        notifications_to_mark_as_read = Notification.where(recipient: @micropost.user_id)
+        notifications_to_mark_as_read.update_all(read_at: Time.zone.now)
+      end
     end
 end

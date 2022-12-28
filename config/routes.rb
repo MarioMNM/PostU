@@ -8,24 +8,23 @@ Rails.application.routes.draw do
   post   "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
   get    "/search",  to: "search#index"
+
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :microposts,          only: [:create, :destroy, :show]
+  resources :relationships,       only: [:create, :destroy]
+  resources :comments,            only: [:create, :destroy]
+
   resources :users do
     member do
       get :following, :followers
     end
   end
-  resources :users do
-    resources :microposts
-  end
-  resources :account_activations, only: [:edit]
-  resources :password_resets,     only: [:new, :create, :edit, :update]
-  resources :microposts,          only: [:create, :destroy]
-  resources :relationships,       only: [:create, :destroy]
 
   resources :microposts do
     resources :likes
   end
 
-  resources :comments,            only: [:create, :destroy]
   resources :microposts do
     resources :comments
   end
