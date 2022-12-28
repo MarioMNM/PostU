@@ -1,8 +1,6 @@
-# Ruby on Rails Tutorial sample application
+# PostU
 
-This is the sample application for the
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails]
+This is a micro-posting application that emulates Tweeter. It is made in Ruby on Rails 7 and uses other technologies such as HTML, CSS, JavaScript and PostgreSQL.
 
 ## Getting started
 
