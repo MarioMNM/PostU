@@ -41,7 +41,7 @@ the header and on the footer (help, about,contact), sign up, and log in.
 
 ![img](app/assets/images/Walkthrough/3.PNG)
 
-3) By clicking on the Sign up button you will recive an email as follows:
+3) By clicking on the Sign up button you will recive an email as the following:
 
 ![img](app/assets/images/Walkthrough/15.PNG)
 
