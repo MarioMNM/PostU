@@ -21,7 +21,7 @@ class CommentNotification < Noticed::Base
     @micropost = Micropost.find(params[:comment][:micropost_id])
     @comment = Comment.find(params[:comment][:id])
     @user = User.find(@comment.user_id)
-    "#{@user.name} commented on your micropost: #{@comment.content.truncate_words(5)}"
+    "#{@user.name} commented on your micropost: #{@comment.content.truncate_words(10)}"
   end
 
   def url
