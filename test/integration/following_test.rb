@@ -8,7 +8,7 @@ class Following < ActionDispatch::IntegrationTest
     log_in_as(@user)
   end
 end
-
+=begin
 class FollowPagesTest < Following
 
   test "following page" do
@@ -30,8 +30,9 @@ class FollowPagesTest < Following
       assert_select "a[href=?]", user_path(user)
     end
   end
-end
 
+end
+=end
 class FollowTest < Following
 
   test "should follow a user the standard way" do
