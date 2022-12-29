@@ -35,19 +35,19 @@ $ rails server
 ## App Walkthrough
 
 1) The first thing you will se is the home page where you can visit the static pages on
-the header and on the footer (help, about,contact), sign up, and log in.
+the header and on the footer (help, about,contact), sign up and log in.
 
 ![img](app/assets/images/Walkthrough/2.PNG)
 
-2) Clicking on signu up will take you to the 'Create your account' page.
+2) When you click on "Sign up", you will be taken to the "Create an account" page.
 
 ![img](app/assets/images/Walkthrough/3.PNG)
 
-3) By clicking on the Sign up button you will recive an email as the following:
+3) When you click on the "Sign up" button you will receive an email like the one below:
 
 ![img](app/assets/images/Walkthrough/15.PNG)
 
-Once you click on Activate you will be redirected to your profile page:
+Once you click on "Activate", you will be redirected to your profile page:
 
 ![img](app/assets/images/Walkthrough/6.PNG)
 
@@ -55,7 +55,7 @@ Once you click on Activate you will be redirected to your profile page:
 
 ![img](app/assets/images/Walkthrough/4.PNG)
 
-Here you can also reset your password in case you forgot it, you just have to.
+Here you can also reset your password in case you forgot it, you just have to
 enter your email
 
 ![img](app/assets/images/Walkthrough/5.PNG)
@@ -64,17 +64,17 @@ and you will recive an email with a link to change your password.
 
 ![img](app/assets/images/Walkthrough/14.PNG)
 
-Note that clicking on the 'Remember me on this computer box' will store your credential
-so you don't need to write them again until you log out.
+Please note that clicking the "Remember me on this computer" checkbox will store your credentials
+so that you don't have to type them in again until you log out.
 
-5) This is the Main page of the app. Here you can see your feed with your micropost
-and those of the users you follow. You have a text field where you can create your own micropost and
-an image attach button to attach an image to your micropost.
+5) This is the main page of the application. Here you can see your feed with your microposts
+and those of the users you follow. You have a text field where you can create your own microposts and
+a button to attach an image to your micropost.
 
 ![img](app/assets/images/Walkthrough/7.PNG)
 
-In the micropost you can like/unlike them, delete them in case you wrote them and you have a link to
-see the micropost and comment it or see all the comments of these micropost.
+In the microposts you can like/dislike, delete them in case you have written them yourself and you have a link to
+view the micropost and comment on it or view all comments on those micro-post.
 
 ![img](app/assets/images/Walkthrough/8.PNG)
 
@@ -82,20 +82,20 @@ You will recive a notification when a user comments one of your microposts.
 
 ![img](app/assets/images/Walkthrough/9.PNG)
 
-6) Clicking the 'Users' button on the navbar will show you all the users of the app.
+6) Clicking the "Users" button on the navbar will show you all the users of the app.
 
 ![img](app/assets/images/Walkthrough/10.PNG)
 
-7) You also have a Search Bar in the navbar where you can search microposts by user or the content of the micropost.
+7) You also have a Search Bar in the navbar where you can search microposts by user or by the content of the micropost.
 
 ![img](app/assets/images/Walkthrough/11.PNG)
 
-You can even order the results alphabeticaly by the user's name or by the content or by published time.
+You can even sort the results alphabetically by user name, by content or by time of publication.
 
 ![Alt text](app/assets/images/Walkthrough/12.PNG)
 
-8) Clicking on the 'Account' button will bring up a menu of options where you can view your profile,
-make changes to it or log out.
+8) When you click on the "Account" button, a menu of options will appear in which you can view your profile,
+modify it or log out.
 
 ![img](app/assets/images/Walkthrough/16.PNG)
 
