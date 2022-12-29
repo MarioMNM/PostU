@@ -1,4 +1,4 @@
-# PostU
+# PostU <img src="app/assets/images/favicon.ico" alt="Logo" width="20"/>
 
 This is a micro-posting application that emulates Tweeter. It is made in Ruby on Rails 7 and uses other technologies such as HTML, CSS, JavaScript and PostgreSQL.</br>
 You can view the app in the following link: https://postu-app.herokuapp.com/.</br>
