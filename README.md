@@ -1,6 +1,8 @@
 # PostU
 
-This is a micro-posting application that emulates Tweeter. It is made in Ruby on Rails 7 and uses other technologies such as HTML, CSS, JavaScript and PostgreSQL.
+This is a micro-posting application that emulates Tweeter. It is made in Ruby on Rails 7 and uses other technologies such as HTML, CSS, JavaScript and PostgreSQL.</br>
+You can view the app in the following link: https://postu-app.herokuapp.com/.</br>
+The app is deployed in Heroku but due to depoyment costs the link might not be able at the time you are reading it. In any case there is an App walkthrough down if the link is not available when you check it.
 
 ## Getting started
 
@@ -41,7 +43,7 @@ the header and on the footer (help, about,contact), sign up, and log in.
 
 ![img](app/assets/images/Walkthrough/3.PNG)
 
-3) By clicking on the Sign up button you will recive an email as follows:
+3) By clicking on the Sign up button you will recive an email as the following:
 
 ![img](app/assets/images/Walkthrough/15.PNG)
 
