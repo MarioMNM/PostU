@@ -102,5 +102,3 @@ modify it or log out.
 This is the options you have to edit your profile, you can even add a description:
 
 ![img](app/assets/images/Walkthrough/13.PNG)
-
-remote_theme: pages-themes/midnight@v0.2.0
