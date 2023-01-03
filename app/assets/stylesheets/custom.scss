@@ -484,19 +484,19 @@ table thead th { color: white; font-size:15pt; }
 /* buttons */
 .btn-primary {
   background-color: $button-color;
-  color: #737C86;
-  &:hover { 
-    background-color: $button-hover-color; 
-    color: #737C86;
+  color: white;
+  &:hover {
+    background-color: $button-hover-color;
+    color: white;
   }
 }
 
 #btn_unfollow {
   background-color: $second-background-color;
-  color: #4A4F54;
-  &:hover { 
-    background-color: #757F89; 
-    color: #4A4F54;
+  color: white;
+  &:hover {
+    background-color: #757F89;
+    color: white;
   }
 }
 
@@ -563,7 +563,7 @@ table thead th { color: white; font-size:15pt; }
   padding-left: 16px;
 }
 
-/* Prueba */
+/* Login form */
 .input-group {
   position: relative;
 }
