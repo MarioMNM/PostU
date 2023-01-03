@@ -562,3 +562,71 @@ table thead th { color: white; font-size:15pt; }
   color: $second-font-color;
   padding-left: 16px;
 }
+
+/* Prueba */
+.input-group {
+  position: relative;
+}
+
+.input {
+  width: 280%;
+  padding: 10px;
+  background: #d3edf8;
+  background-color: $main-background-color;
+  border-radius: 2px;
+  outline: none;
+  color: white;
+  border: 1px solid #0da2ff;
+}
+
+.placeholder {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 14px;
+  padding: 0px 5px;
+  color: #0da2ff;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown)
++ .placeholder{
+  top: -10px;
+  background-color: $main-background-color;
+}
+
+.input-password {
+  width: 280%;
+  padding: 10px;
+  background: #d3edf8;
+  background-color: $main-background-color;
+  border-radius: 2px;
+  outline: none;
+  color: white;
+  border: 1px solid #0da2ff;
+}
+
+.placeholder2 {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 14px;
+  padding: 0px 5px;
+  color: #0da2ff;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-password:focus + .placeholder2,
+.input-password:not(:placeholder-shown)
++ .placeholder2{
+  top: -10px;
+  background-color: $main-background-color;
+}
+
+.form-control {
+  background-color: $main-background-color;
+  color: white;
+}
