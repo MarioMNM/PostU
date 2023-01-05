@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-  end    
+  end
 
   def update
     @user = User.find(params[:id])
@@ -40,14 +40,14 @@ class UsersController < ApplicationController
     else
       render 'edit', status: :unprocessable_entity
     end
-  end    
+  end
 
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url, status: :see_other
   end
-  
+
   def following
     @title = "Following"
     @user  = User.find(params[:id])
@@ -62,7 +62,11 @@ class UsersController < ApplicationController
     render 'show_follow', status: :unprocessable_entity
   end
 
-  private 
+  def search
+    @users = User.where("name LIKE ?", "%" + params[:query_user] + "%")
+  end
+
+  private
 
     def user_params
       params.require(:user).permit(:name,:description, :email, :password,

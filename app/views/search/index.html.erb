@@ -1,25 +1,31 @@
-<% provide(:title, "Search") %>
+<% provide(:title, "Search: " + params[:q][:user_name_or_content_i_cont_any]) %>
 
-<h1 class="text-center"><%= pluralize(@microposts.count, "result") %></h1>
+<% if @microposts.count == 0%>
+  <h1 class="text-center">No results for "<%= params[:q][:user_name_or_content_i_cont_any] %>"</h1>
+  <%= image_tag("no_res.png", width: "110", class: "center-img") %>
 
-<div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th><%= sort_link(@query, :user_name, "User Name", default_order: :asc) %></th>
-        <th><%= sort_link(@query, :content, "Micropost Content", default_order: :desc) %></th>
-        <th><%= sort_link(@query, :created_at, "Created At", default_order: :desc) %></th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @microposts.each do |micropost| %>
+<% else %>
+  <h1 class="text-center"><%= pluralize(@microposts.count, "result") %></h1>
+
+  <div class="container">
+    <table class="table">
+      <thead>
         <tr>
-          <td><%= link_to micropost.user.name, user_path(micropost.user) %></td>
-          <td><%= micropost.content.truncate_words(30) %></td>
-          <td><%= micropost.created_at %></td>
+          <th><%= sort_link(@query, :user_name, "User Name", default_order: :asc) %></th>
+          <th><%= sort_link(@query, :content, "Micropost Content", default_order: :desc) %></th>
+          <th><%= sort_link(@query, :created_at, "Created At", default_order: :desc) %></th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+        <% @microposts.each do |micropost| %>
+          <tr>
+            <td><%= link_to micropost.user.name, user_path(micropost.user) %></td>
+            <td><%= micropost.content.truncate_words(30) %></td>
+            <td><%= micropost.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

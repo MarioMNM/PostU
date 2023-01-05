@@ -25,10 +25,13 @@ class MicropostsController < ApplicationController
   end
 
   def show
-    @micropost = Micropost.find(params[:id])
-    @comments = @micropost.comments.order(created_at: :desc)
-
-    mark_notifications_as_read
+    begin
+      @micropost = Micropost.find(params[:id])
+      @comments = @micropost.comments.order(created_at: :desc)
+      mark_notifications_as_read
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_url
+    end
   end
 
   private

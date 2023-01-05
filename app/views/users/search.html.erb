@@ -1,0 +1,9 @@
+<% provide(:title, "Search Users: " + params[:query_user]) %>
+
+<h1 class="text-center"><%= pluralize(@users.count, "result") %></h1>
+
+<%= render 'search_users_form' %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>

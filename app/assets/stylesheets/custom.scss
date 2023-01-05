@@ -308,7 +308,7 @@ input {
   width: auto;
   margin-left: 0;
 }
-  
+
 /* Dropdown menu */
 .dropdown-menu.active {
   display: block;
@@ -480,6 +480,15 @@ span.image {
 
 /* search table */
 table thead th { color: white; font-size:15pt; }
+
+/* center image */
+.center-img {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
 
 /* buttons */
 .btn-primary {
