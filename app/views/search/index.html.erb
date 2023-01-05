@@ -2,7 +2,9 @@
 
 <% if @microposts.count == 0%>
   <h1 class="text-center">No results for "<%= params[:q][:user_name_or_content_i_cont_any] %>"</h1>
-  <%= image_tag("no_res.png", width: "110", class: "center-img") %>
+  <div style="margin-top: 50px;">
+    <%= image_tag("no_res.png", width: "110", class: "center-img") %>
+  </div>
 
 <% else %>
   <h1 class="text-center"><%= pluralize(@microposts.count, "result") %></h1>
@@ -28,4 +30,5 @@
       </tbody>
     </table>
   </div>
+
 <% end %>
